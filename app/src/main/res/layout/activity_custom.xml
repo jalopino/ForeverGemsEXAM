@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Custom">
+
+        <TextView
+            android:id="@+id/base_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base Price:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/base_price_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/base_price_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/material_factor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material Factor:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/base_price_input" />
+        <EditText
+            android:id="@+id/material_factor_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/material_factor_label"
+            app:layout_constraintTop_toBottomOf="@id/base_price_input" />
+
+        <TextView
+            android:id="@+id/color_factor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color Factor:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/material_factor_input" />
+        <EditText
+            android:id="@+id/color_factor_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/color_factor_label"
+            app:layout_constraintTop_toBottomOf="@id/material_factor_input" />
+
+        <TextView
+            android:id="@+id/clarity_factor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clarity Factor:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color_factor_input" />
+        <EditText
+            android:id="@+id/clarity_factor_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clarity_factor_label"
+            app:layout_constraintTop_toBottomOf="@id/color_factor_input" />
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            app:layout_constraintEnd_toStartOf="@id/reset_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clarity_factor_input" />
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/calculate_button"
+            app:layout_constraintTop_toBottomOf="@id/clarity_factor_input" />
+
+        <TextView
+            android:id="@+id/price_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: $0.00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
